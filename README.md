@@ -1,6 +1,15 @@
 # yonde!
 **yonde! (読んで!)** é um mangá downloader (para leitura offline) voltado para sites e scans brasileiros. Também permite que você converta os capítulos baixados para um arquivo PDF maciço para facilitar a leitura em diferentes dispositivos. 
 
+- [Instalação](#instalação)
+- [Sites suportados](#sites-suportados)
+- [Opções](#opções)
+- [Changelog](#changelog)
+- [Baixando mangás](#baixando-mangás)
+- [Contribuindo](#contribuindo)
+- [Avisos](#avisos)
+- [Manifesto](#manifesto)
+
 ## Instalação
 ``yonde!`` requer Python 3.7+
 
