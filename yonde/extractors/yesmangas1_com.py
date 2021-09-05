@@ -1,5 +1,5 @@
-from exceptions.exceptions import ForbiddenUrlException
-from main_class.main_extractor import MainExtractor
+from yonde.exceptions.exceptions import ForbiddenUrlException
+from yonde.main_class.main_extractor import MainExtractor
 import time
 
 

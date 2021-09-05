@@ -1,4 +1,4 @@
-from __version__ import __version__
+from yonde.__version__ import __version__
 
 
 class Printer(object):

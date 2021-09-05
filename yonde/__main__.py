@@ -1,4 +1,4 @@
-from main import Yonde
+from yonde.main import Yonde
 
 
 def main():

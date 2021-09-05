@@ -1,6 +1,6 @@
-from downloader.downloader import Downloader
-from session.session import Session
-from printer.printer import Printer
+from yonde.downloader.downloader import Downloader
+from yonde.session.session import Session
+from yonde.printer.printer import Printer
 from lxml.html import fromstring
 import json
 import re

@@ -1,4 +1,4 @@
-from images.images import Images
+from yonde.images.images import Images
 import concurrent.futures
 import time
 

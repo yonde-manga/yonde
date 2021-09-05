@@ -1,13 +1,13 @@
-from extractors.goldenmangas_top import GoldenMangas
-from extractors.elitemangas_com import EliteMangas
-from extractors.mangahost4_com import MangaHosted
-from extractors.unionmangas_top import UnionMangas
-from extractors.muitomanga_com import MuitoManga
-from extractors.mangatube_site import MangaTube
-from extractors.yesmangas1_com import YesMangas
-from extractors.mangayabu_top import MangaYabu
-from extractors.brmangas_com import BrMangas
-from extractors.leitor_net import Leitor
+from yonde.extractors.goldenmangas_top import GoldenMangas
+from yonde.extractors.elitemangas_com import EliteMangas
+from yonde.extractors.mangahost4_com import MangaHosted
+from yonde.extractors.unionmangas_top import UnionMangas
+from yonde.extractors.muitomanga_com import MuitoManga
+from yonde.extractors.mangatube_site import MangaTube
+from yonde.extractors.yesmangas1_com import YesMangas
+from yonde.extractors.mangayabu_top import MangaYabu
+from yonde.extractors.brmangas_com import BrMangas
+from yonde.extractors.leitor_net import Leitor
 import argparse
 
 

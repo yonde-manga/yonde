@@ -1,7 +1,7 @@
 import random
 import requests
 import http.client
-from exceptions.exceptions import TooManyRedirectsException, ConnectionErrorException, ForbiddenUrlException
+from yonde.exceptions.exceptions import TooManyRedirectsException, ConnectionErrorException, ForbiddenUrlException
 http.client._MAXHEADERS = 1000
 
 
