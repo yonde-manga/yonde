@@ -16,3 +16,8 @@ class ConnectionErrorException(ExceptionBase):
 class ForbiddenUrlException(ExceptionBase):
     """ Erro 403 ao acessar uma URL """
     pass
+
+
+class FailedImageException(ExceptionBase):
+    """ Imagem com 0 bytes """
+    pass
