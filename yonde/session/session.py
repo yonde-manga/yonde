@@ -1,7 +1,8 @@
 import random
 import requests
 import http.client
-from yonde.exceptions.exceptions import TooManyRedirectsException, ConnectionErrorException, ForbiddenUrlException
+from yonde.exceptions.exceptions import TooManyRedirectsException, ConnectionErrorException, ForbiddenUrlException, \
+    FailedImageException
 http.client._MAXHEADERS = 1000
 
 
@@ -32,6 +33,8 @@ class Session(object):
             req = self.session.get(url)
             if req.status_code == 403:
                 raise ForbiddenUrlException(f'ForbiddenUrl - {url} ({req.status_code})')
+            elif len(req.content) == 0:
+                raise FailedImageException(f'FailedImage - {url} ({req.status_code})')
             return req
         except requests.exceptions.TooManyRedirects:
             raise TooManyRedirectsException(f'TooManyRedirects - {url} ({req.status_code})')
