@@ -11,7 +11,8 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 class Images(object):
     @staticmethod
     def manga_pdf_path(output_path, manga_name, pdf_name):
-        return Path(Path.home(), manga_name, pdf_name) if not output_path else Path(output_path, manga_name, pdf_name)
+        return Path(Path.home(), 'Downloads', manga_name, pdf_name) if not output_path else Path(output_path,
+                                                                                                 manga_name, pdf_name)
 
     @staticmethod
     def create_path(path):
