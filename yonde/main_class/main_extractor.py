@@ -23,7 +23,7 @@ class MainExtractor(object):
         self.c = Color()
         self._url = url
         self._site_name = self.re_findall('https?://(?:www.)?.+(?:\.net|\.com(?:\.br)?|\.top|\.site)', self._url)[0]
-        self._downloader = Downloader(self._session, self._output, self._threads, self._download_type)
+        self._downloader = Downloader(self._session, self._output, self._threads, self._download_type, self.c)
 
     @staticmethod
     def re_findall(pattern, text):

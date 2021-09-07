@@ -4,12 +4,13 @@ import time
 
 
 class Downloader(object):
-    def __init__(self, session, output, threads, typo):
+    def __init__(self, session, output, threads, typo, color):
         self._threads = threads
         self._session = session
         self._images = Images()
         self._output = output
         self._typo = typo
+        self._c = color
 
     @staticmethod
     def prog_bar(baixado, total, desc=''):
@@ -48,12 +49,15 @@ class Downloader(object):
                         image_name += 1
                     for f in concurrent.futures.as_completed(downloads_concluidos):
                         f.result()
-                        self.prog_bar(imagens_baixadas, len(urls), desc=f'   \033[95m: \033[0mCapítulo {cap_atual}:')
+                        self.prog_bar(imagens_baixadas, len(urls), desc=f'   {self._c.magenta}: {self._c.reset}Capítulo'
+                                                                        f' {cap_atual}:')
                         imagens_baixadas += 1
                     print()
                 self._images.typo_checker(output, output, nome_pdf, self._typo)
             else:
-                print(f'   \033[95m: \033[0mCapítulo {cap_atual}: \033[91mNenhuma imagem encontrada!\033[0m')
+                print(f'   {self._c.magenta}: {self._c.reset}Capítulo {cap_atual}: {self._c.bold}{self._c.red}Nenhuma '
+                      f'imagem encontrada!{self._c.reset}')
         except Exception as e:
             self._images.remove_path(manga_path)
-            print(f'   \033[95m: \033[0mCapítulo {cap_atual}: \033[91m{e}!\033[0m')
+            print(f'   {self._c.magenta}: {self._c.reset}Capítulo {cap_atual}: {self._c.bold}{self._c.red}{e}!'
+                  f'{self._c.reset}')
