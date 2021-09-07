@@ -3,3 +3,5 @@ cloudscraper==1.2.58
 lxml==4.6.3
 requests==2.26.0
 Pillow==8.3.2
+cssselect==1.1.0
+colorama==0.4.4
