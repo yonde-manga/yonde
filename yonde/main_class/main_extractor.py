@@ -1,6 +1,5 @@
 from yonde.downloader.downloader import Downloader
 from yonde.session.session import Session
-from yonde.printer.printer import Printer
 from yonde.__version__ import __version__
 from yonde.color.color import Color
 from lxml.html import fromstring
