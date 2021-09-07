@@ -50,6 +50,7 @@ class Images(object):
 
     def typo_checker(self, path_images, output_path, pdf_name, typo):
         filenames = natsort.natsorted([i for i in glob.iglob(str(Path(path_images, '*.jpg')))])
+        typo = [i.lower() for i in typo]  # Convertando todas as entradas para minúsculo para evitar confusão.
         if filenames:
             if typo == ["pdf", "imagens"] or typo == ["imagens", "pdf"]:  # Converter PDF e manter imagens.
                 self._make_pdf(filenames, output_path, pdf_name)
