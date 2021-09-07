@@ -94,7 +94,7 @@ class MainExtractor(object):
  {}:: {}Baixando {}{}
  {}:: {}Baixando de {}{}
  {}:: {}Baixando com {}{} {}threads
- {}:: {}Baixando {}{} {}capitulos:\033[0m
+ {}:: {}Baixando {}{} {}capitulos:{}
 """.format(
                 self.c.yellow, "                       _      _ ",
                 self.c.yellow, "                      | |    | |",
@@ -106,9 +106,10 @@ class MainExtractor(object):
                 self.c.blue,   " |___/                          ",
                 self.c.reset,
                 self.c.magenta, self.c.reset, "https://github.com/yonde-manga", self.c.magenta, self.c.reset,
-                self.c.magenta, self.c.reset, "Versão \033[91m{}\033[0m".format(__version__), self.c.magenta,
+                self.c.magenta, self.c.reset, f"Versão {self.c.red}{__version__}{self.c.reset}", self.c.magenta,
                 self.c.reset,
-                self.c.magenta, self.c.reset, "by \033[91m\033[1myanhuishi\033[0m", self.c.magenta, self.c.reset,
+                self.c.magenta, self.c.reset, f"by {self.c.bold}{self.c.red}yanhuishi{self.c.reset}", self.c.magenta,
+                self.c.reset,
                 self.c.magenta, self.c.yellow, self.c.blue, self._manga_name.lower().replace('_', '-'),
                 self.c.magenta, self.c.yellow, self.c.blue, self._site_name,
                 self.c.magenta, self.c.yellow, self.c.blue, self._threads, self.c.yellow,
